@@ -101,7 +101,11 @@ function startQuiz(){
     showQuestion(); // function to display questions from the questions array
 }
 
+/**
+ * questions pulled from the array and getting updated.
+ */
 function showQuestion(){
+    resetPrevious()
     let currentQuestion = questions[currentQuestionIndex];
     let questionNumber = currentQuestionIndex + 1;
     questionElement.innerHTML = currentQuestion.question;
@@ -116,13 +120,34 @@ function showQuestion(){
             button.dataset.correct = answer.correct;
         }
         
+        button.addEventListener('click',selectAnswer)
         
     }
 
 
 }
 
+/**EveryTime a new question is appended previous set of buttons 
+ * will be removed. 
+ */
 function resetPrevious(){
+    nextbtn.style.display = "none";
+    while(answerBtn.firstChild){
+        answerBtn.removeChild(answerBtn.firstChild);
+    }
+
+}
+
+function selectAnswer(event){
+   let selectedBtn = event.target;
+   const isCorrect = selectedBtn.dataset.correct === "true";
+   if(isCorrect){
+    selectedBtn.classList.add("correct");
+
+   }else{
+    selectedBtn.classList.add("incorrect");
+   }
+   console.log(selectedBtn);
 
 }
 

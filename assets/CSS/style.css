@@ -161,6 +161,14 @@ margin-bottom: 10px;
     display: none;
 }
 
+.correct{
+    
+    background: linear-gradient(180deg, #bdf0bd, #17cf17, #76d376);
+}
+
+.incorrect{
+    background: linear-gradient(180deg, #f3afaa, #f76d63, #f36c62);
+}
 
 @media screen and (min-width:900px) {
     h1{
