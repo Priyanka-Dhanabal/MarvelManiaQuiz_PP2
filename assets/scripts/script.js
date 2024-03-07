@@ -126,6 +126,21 @@ function showQuestion(){
 
 }
 
+/**
+ * event listener added for next button so that next set of questions are shown.
+ */
+
+nextbtn.addEventListener('click', handleNextBtn);
+
+function handleNextBtn(){
+    currentQuestionIndex ++;
+    console.log("here");
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }
+}
+
+
 /**EveryTime a new question is appended previous set of buttons 
  * will be removed. 
  */
