@@ -81,3 +81,21 @@ const questions = [
        ]
    }
 ]
+
+const questionElement = document.getElementById("questions");
+const answerBtn = document.getElementById("answer-btns");
+const nextbtn = document.getElementById("next-btn");
+const welcomePageDiv = document.getElementById("welcome-page");
+const quizDiv = document.getElementById("container");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+// function to start the quiz
+
+function startQuiz(){
+    let currentQuestionIndex = 0;
+    let score = 0;
+    nextbtn.innerHTML = "Next";
+    showQuestion(); // function to display questions from the questions array
+}
