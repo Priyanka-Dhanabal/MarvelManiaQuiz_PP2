@@ -106,12 +106,19 @@ border-radius: 5px;
     text-align: left;
     background-color: hsl(0deg 0% 0% / 70%);
     width: 90%;
-    max-width: 600px;
+    max-width: 900px;
     color: #fff;
     margin: 80px auto;
     padding: 30px;
     border-radius: 10px;
     font-family: "Protest Revolution", sans-serif;
+}
+
+#question-tracking{
+    margin:20px 0;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: end;
 }
 
 #questions{
