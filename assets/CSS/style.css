@@ -25,3 +25,69 @@ h1{
     transform: scaleY(1.5);
     letter-spacing: 2px;
 }
+
+.welcome-page{
+    width: 90%;
+    max-width: 600px;
+    background-color: hsl(0deg 0% 0% / 70%);
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Protest Revolution", sans-serif;
+    border-radius: 10px;
+    color: #fff;
+}
+.welcome-page p {
+padding: 10px;
+margin: 5px 0;
+font-size: 1.8em;
+letter-spacing: 0.5px;
+font-weight: 800;
+}
+
+label{
+padding: 10px;
+margin: 20px 0;
+font-size: 1.5em;
+font-weight: 500;
+}
+
+#name{
+height: 2em;
+width: 80%;
+margin: 20px 0;
+/* box-shadow: 2px 2px 2px #6c6c6c; */
+border: 2px solid #222;
+text-align: center;
+border-radius: 5px;
+}
+
+#name-btn{
+    margin: 5px;
+    padding: 3px;
+}
+
+#welcome-tag{
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+#start-btn{
+    width: 10em;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: oswald, sans-serif;
+    border-radius: 5px;
+    background-color: hsl(240, 100%, 50%);
+    color: #fff;
+    border: none;
+}
+
+#start-btn:hover{
+    background-color: hsl(240, 80%, 90%);
+    color: #000;
+    transition: 1s;
+}
