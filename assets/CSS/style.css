@@ -99,6 +99,61 @@ border-radius: 5px;
     display: none;
 }
 
+/*Applying style for everything quiz container*/
+
+.quiz-container{
+        
+    text-align: left;
+    background-color: hsl(0deg 0% 0% / 70%);
+    width: 90%;
+    max-width: 600px;
+    color: #fff;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: "Protest Revolution", sans-serif;
+}
+
+#questions{
+
+font-size: 1.5em;
+margin-bottom: 10px;
+
+}
+
+.quiz .btn{
+background-color: #4e4d4d42;
+color: #fff;
+font-weight: 900;
+width: 100%;
+border: 1px solid #fff;
+padding: 10px;
+margin: 10px 0;
+text-align: left;
+border-radius: 8px;
+font-family: "Protest Revolution", sans-serif;
+font-size: 1em;
+
+}
+
+.quiz .btn:hover{
+box-shadow: 5px 5px 5px #a8a8a8;
+transition: 0.5s;
+}
+
+#next-btn{
+margin: 20px auto;
+padding: 10px 40px;
+font-size: 15px;
+border-radius: 8px;
+border: none;
+background-color: hsl(240, 100%, 50%);
+color: white;   
+font-weight: 600;
+cursor: pointer; 
+display: none;
+}
+
 @media screen and (min-width:900px) {
     h1{
         font-size: 5em;
