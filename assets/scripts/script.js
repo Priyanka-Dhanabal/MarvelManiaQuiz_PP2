@@ -134,10 +134,18 @@ nextbtn.addEventListener('click', handleNextBtn);
 
 function handleNextBtn(){
     currentQuestionIndex ++;
-    console.log("here");
+    
     if(currentQuestionIndex < questions.length){
         showQuestion();
+    }else{
+        showScore();
+
     }
+}
+
+function showScore(){
+    resetPrevious();
+    console.log("here");
 }
 
 
