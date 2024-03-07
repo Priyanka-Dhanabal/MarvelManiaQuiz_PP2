@@ -13,18 +13,22 @@ body{
     
 }
 
+
+
 h1{
     text-align: center;
     margin: 20px;
-    padding: 10px;
+    padding: 20px;
     font-size: 3em;
-    font-family: "Protest Revolution", sans-serif;
+    font-family: "protest Revolution", sans-serif;
     font-weight: 900;
-    color: white;
-    text-shadow: 6px 6px 3px #ff1100;
+    color: #fff;
+    text-shadow: -6px 6px 3px #f00101;
+    letter-spacing: 2.5px;
     transform: scaleY(1.5);
-    letter-spacing: 2px;
 }
+
+
 
 .welcome-page{
     width: 90%;
@@ -57,7 +61,6 @@ font-weight: 500;
 height: 2em;
 width: 80%;
 margin: 20px 0;
-/* box-shadow: 2px 2px 2px #6c6c6c; */
 border: 2px solid #222;
 text-align: center;
 border-radius: 5px;
@@ -90,4 +93,14 @@ border-radius: 5px;
     background-color: hsl(240, 80%, 90%);
     color: #000;
     transition: 1s;
+}
+
+.hide{
+    display: none;
+}
+
+@media screen and (min-width:900px) {
+    h1{
+        font-size: 5em;
+    }
 }
