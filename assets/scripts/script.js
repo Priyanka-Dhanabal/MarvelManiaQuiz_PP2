@@ -124,7 +124,6 @@ function showQuestion(){
         
     }
 
-
 }
 
 /**EveryTime a new question is appended previous set of buttons 
@@ -147,8 +146,19 @@ function selectAnswer(event){
    }else{
     selectedBtn.classList.add("incorrect");
    }
-   console.log(selectedBtn);
+   
+   let childrenFromAnswerBtn = Array.from(answerBtn.children);
+   for(childBtn of childrenFromAnswerBtn){
+    if(childBtn.dataset.correct === "true"){
+        childBtn.classList.add("correct");
+    }
+    childBtn.disabled = true;
+
+   }
+   nextbtn.style.display = "block";
 
 }
+
+
 
 startQuiz();
