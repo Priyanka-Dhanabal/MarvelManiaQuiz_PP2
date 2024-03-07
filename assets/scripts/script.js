@@ -88,9 +88,18 @@ const nextbtn = document.getElementById("next-btn");
 const welcomePageDiv = document.getElementById("welcome-page");
 const quizDiv = document.getElementById("container");
 let questionTracking = document.getElementById("question-tracking");
+let startBtn = document.getElementById("start-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
+
+// Event Listener for the Start Button in Welcome Page
+
+startBtn.addEventListener('click', function(){
+    welcomePageDiv.classList.add("hide");
+    quizDiv.classList.remove("hide");
+    startQuiz();
+})
 
 // function to start the quiz
 
@@ -145,7 +154,24 @@ function handleNextBtn(){
 
 function showScore(){
     resetPrevious();
-    console.log("here");
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length} !`
+    questionElement.style.textAlign = "center";
+    
+    let result = document.createElement("h3");
+    if(score >= 7){
+        
+        result.innerText = "YOU ARE A HULK";
+    } else if(score >= 4 ){
+        result.innerText = "YOU DID GOOOOOOD !";
+
+    }else{
+        console.log("here");
+        result.innerText = "YOU NEED SPEND TIME WATCHING MARVEL MOVIES !"
+    }
+
+    nextbtn.style.display = "block";
+    nextbtn.innerText = "HOME";
+    nextbtn.style.fontSize = "1.5em";
 }
 
 
@@ -165,6 +191,7 @@ function selectAnswer(event){
    const isCorrect = selectedBtn.dataset.correct === "true";
    if(isCorrect){
     selectedBtn.classList.add("correct");
+    score ++;
 
    }else{
     selectedBtn.classList.add("incorrect");
@@ -183,5 +210,3 @@ function selectAnswer(event){
 }
 
 
-
-startQuiz();

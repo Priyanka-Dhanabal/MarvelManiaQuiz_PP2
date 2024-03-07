@@ -138,8 +138,8 @@ border-radius: 5px;
 
 #questions{
 
-font-size: 1.5em;
-margin-bottom: 10px;
+    font-size: 1.6em;
+    margin: 25px 0;
 
 }
 
@@ -154,7 +154,7 @@ margin-bottom: 10px;
     text-align: left;
     border-radius: 8px;
     font-family: "Protest Revolution", sans-serif;
-    font-size: 1em;
+    font-size: 1.3em;
     cursor:pointer;
     
 }
@@ -179,10 +179,16 @@ margin-bottom: 10px;
 .correct{
     
     background: linear-gradient(180deg, #bdf0bd, #17cf17, #76d376);
+    color:#000;
 }
 
 .incorrect{
     background: linear-gradient(180deg, #f3afaa, #f76d63, #f36c62);
+    color:#000;
+}
+
+.btn:disabled{
+    cursor: no-drop;
 }
 
 @media screen and (min-width:900px) {
