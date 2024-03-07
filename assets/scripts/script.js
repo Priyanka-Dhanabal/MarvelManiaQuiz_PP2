@@ -87,6 +87,7 @@ const answerBtn = document.getElementById("answer-btns");
 const nextbtn = document.getElementById("next-btn");
 const welcomePageDiv = document.getElementById("welcome-page");
 const quizDiv = document.getElementById("container");
+let questionTracking = document.getElementById("question-tracking");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -99,3 +100,30 @@ function startQuiz(){
     nextbtn.innerHTML = "Next";
     showQuestion(); // function to display questions from the questions array
 }
+
+function showQuestion(){
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNumber = currentQuestionIndex + 1;
+    questionElement.innerHTML = currentQuestion.question;
+    questionTracking.innerHTML = `${questionNumber} of ${questions.length} questions`;
+
+    for(answer of currentQuestion.answers){
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerBtn.append(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        
+        
+    }
+
+
+}
+
+function resetPrevious(){
+
+}
+
+startQuiz();
