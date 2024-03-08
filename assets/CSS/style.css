@@ -50,26 +50,7 @@ letter-spacing: 0.5px;
 font-weight: 800;
 }
 
-label{
-padding: 10px;
-margin: 20px 0;
-font-size: 1.5em;
-font-weight: 500;
-}
 
-#name{
-height: 2em;
-width: 80%;
-margin: 20px 0;
-border: 2px solid #222;
-text-align: center;
-border-radius: 5px;
-}
-
-#name-btn{
-    margin: 5px;
-    padding: 3px;
-}
 
 #welcome-tag{
     font-size: 2em;
@@ -163,7 +144,7 @@ border-radius: 5px;
     box-shadow: 5px 5px 5px #a8a8a8;
     transition: 0.5s;
 }
-#next-btn{
+#next-btn, .submit-btn{
     margin: 20px auto;
     padding: 10px 40px;
     font-size: 15px;
@@ -174,6 +155,12 @@ border-radius: 5px;
     font-weight: 600;
     cursor: pointer; 
     display: none;
+}
+
+#next-btn:hover, .submit-btn:hover{
+    background-color: hsl(240, 80%, 90%);
+    color: #000;
+    transition: 1s;
 }
 
 .correct{
@@ -189,6 +176,51 @@ border-radius: 5px;
 
 .btn:disabled{
     cursor: no-drop;
+}
+
+/*Review Div*/
+
+.review{
+    text-align: center;
+    background-color: hsl(0deg 0% 0% / 70%);
+    width: 90%;
+    max-width: 900px;
+    color: #fff;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Protest Revolution", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.review h3{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.fa-star{
+    margin: 0 5px 15px;
+    font-size: 1.5em;
+}
+
+label{
+    font-size: 1.5em;
+    font-weight: 500;
+    }
+
+#suggestion{
+    margin: 20px;
+    font-size: 1.5em;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.submit-btn{
+    display: block;
 }
 
 @media screen and (min-width:900px) {

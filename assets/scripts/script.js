@@ -166,7 +166,7 @@ function showScore(){
     
     let result = document.createElement("h3");
     if(score >= 7){
-        
+       
         result.innerText = "YOU ARE A HULK";
     } else if(score >= 4 ){
         result.innerText = "YOU DID GOOOOOOD !";

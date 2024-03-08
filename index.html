@@ -27,7 +27,7 @@
 
         <!-- Container for Welcome page -->
 
-        <div id="welcome-page" class="welcome-page">
+        <div id="welcome-page" class="welcome-page hide">
             <P>Are you a Marvel Fan?</P>
 
             <button id="start-btn">START</button><br>
@@ -35,7 +35,7 @@
                 <h2 id="instruction">Instructions</h2>
                 <p><i class="fa-solid fa-pen-nib"></i> Choose one of the four options to answer the question. Once
                     chosen, you can not change. CareFull !<br>
-                    <br> <i class="fa-solid fa-pen-nib"></i> Your score will be shown at the end.</p>
+                    <br> <i class="fa-solid fa-pen-nib"></i> Your score will be displayed at the end.</p>
             </div>
 
         </div>
@@ -45,21 +45,38 @@
 
         <!-- Container for quiz -->
 
-        <div id="container" class="quiz-container hide ">
+        <div id="container" class="quiz-container ">
             <div class="quiz">
                 <div id="question-tracking">
                     1 of 10 question
                 </div>
                 <h2 id="questions">Questions are here</h2>
                 <div id="answer-btns">
-                    <button class="btn">Answer 1</button>
+                   <!-- <button class="btn">Answer 1</button>
                     <button class="btn">Answer 2</button>
                     <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
+                    <button class="btn">Answer 4</button>   -->
                 </div>
                 <button id="next-btn">Next</button>
             </div>
 
+        </div>
+
+        <div class="review">
+            <form action="https://formdump.codeinstitute.net" method="post">
+                <h3>Give us a rating:</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <br>
+
+                <label for="suggestion">Any Suggestions?</label><br>
+                <textarea id="suggestion" class="suggestion" rows="3" cols="30"></textarea><br>
+                <button class="submit-btn">Submit</button>
+            </form>
+            
         </div>
 
         <script src="https://kit.fontawesome.com/0f5fd35744.js" crossorigin="anonymous"></script>
