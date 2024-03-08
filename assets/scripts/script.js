@@ -139,7 +139,14 @@ function showQuestion(){
  * event listener added for next button so that next set of questions are shown.
  */
 
-nextbtn.addEventListener('click', handleNextBtn);
+nextbtn.addEventListener('click', function(){
+    if(currentQuestionIndex >= questions.length){
+        quizDiv.classList.add("hide");
+        welcomePageDiv.classList.remove("hide");
+    }else{
+        handleNextBtn();
+    }
+});
 
 function handleNextBtn(){
     currentQuestionIndex ++;
@@ -148,7 +155,7 @@ function handleNextBtn(){
         showQuestion();
     }else{
         showScore();
-
+        
     }
 }
 
@@ -165,13 +172,16 @@ function showScore(){
         result.innerText = "YOU DID GOOOOOOD !";
 
     }else{
-        console.log("here");
-        result.innerText = "YOU NEED SPEND TIME WATCHING MARVEL MOVIES !"
+        console.log(result);
+        result.innerText = "AHMMMMMMMMM, OKayyyyyyyy !!!"
     }
+
+    answerBtn.append(result);
 
     nextbtn.style.display = "block";
     nextbtn.innerText = "HOME";
     nextbtn.style.fontSize = "1.5em";
+
 }
 
 
