@@ -9,7 +9,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    
     
 }
 
@@ -203,6 +203,7 @@ font-weight: 800;
 .fa-star{
     margin: 0 5px 15px;
     font-size: 1.5em;
+    color: #5c5b5b;
 }
 
 label{
