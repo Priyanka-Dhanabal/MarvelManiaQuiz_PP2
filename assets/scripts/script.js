@@ -89,6 +89,8 @@ const welcomePageDiv = document.getElementById("welcome-page");
 const quizDiv = document.getElementById("container");
 let questionTracking = document.getElementById("question-tracking");
 let startBtn = document.getElementById("start-btn");
+let reviewDiv = document.getElementById("review");
+
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -140,10 +142,13 @@ function showQuestion(){
  */
 
 nextbtn.addEventListener('click', function(){
-    if(currentQuestionIndex >= questions.length){
-        quizDiv.classList.add("hide");
+    if(currentQuestionIndex === questions.length){
+        console.log("hereNow");
         welcomePageDiv.classList.remove("hide");
+        quizDiv.classList.add("hide");
+
     }else{
+        console.log("here");
         handleNextBtn();
     }
 });
@@ -181,6 +186,8 @@ function showScore(){
     nextbtn.style.display = "block";
     nextbtn.innerText = "HOME";
     nextbtn.style.fontSize = "1.5em";
+
+    
 
 }
 

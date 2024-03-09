@@ -9,7 +9,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    height: 100vh;
     
 }
 
@@ -190,8 +190,7 @@ font-weight: 800;
     padding: 10px;
     border-radius: 10px;
     font-family: "Protest Revolution", sans-serif;
-    display: flex;
-    justify-content: center;
+       
 }
 
 .review h3{
@@ -224,8 +223,4 @@ label{
     display: block;
 }
 
-@media screen and (min-width:900px) {
-    h1{
-        font-size: 5em;
-    }
-}
+

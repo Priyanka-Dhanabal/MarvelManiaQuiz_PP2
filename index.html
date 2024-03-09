@@ -7,6 +7,9 @@
     <title>MarvelManiaa | Quiz</title>
     <!--SEO-->
 
+    <meta name="description" content="A Marvel themed quiz website">
+    <meta name="keywords" content="MarvelManiaa quiz, marvel quiz, quiz">
+
     <!--Importing Google font-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +30,7 @@
 
         <!-- Container for Welcome page -->
 
-        <div id="welcome-page" class="welcome-page ">
+        <div id="welcome-page" class="welcome-page  ">
             <P>Are you a Marvel Fan?</P>
 
             <button id="start-btn">START</button><br>
@@ -47,12 +50,12 @@
 
         <div id="container" class="quiz-container hide ">
             <div class="quiz">
-                <div id="question-tracking">
+                <div id="question-tracking" class="question-tracking">
                     1 of 10 question
                 </div>
                 <h2 id="questions">Questions are here</h2>
                 <div id="answer-btns">
-                   <!-- <button class="btn">Answer 1</button>
+                    <!-- <button class="btn">Answer 1</button>
                     <button class="btn">Answer 2</button>
                     <button class="btn">Answer 3</button>
                     <button class="btn">Answer 4</button>   -->
@@ -62,7 +65,7 @@
 
         </div>
 
-        <div class="review">
+        <div id="review" class="review hide" >
             <form action="https://formdump.codeinstitute.net" method="post">
                 <h3>Give us a rating:</h3>
                 <i class="fa-solid fa-star"></i>
@@ -76,11 +79,13 @@
                 <textarea id="suggestion" class="suggestion" rows="3" cols="30"></textarea><br>
                 <button class="submit-btn">Submit</button>
             </form>
-            
+
         </div>
 
         <script src="https://kit.fontawesome.com/0f5fd35744.js" crossorigin="anonymous"></script>
         <script src="assets/scripts/script.js"></script>
+
+    </main>
 </body>
 
 </html>
