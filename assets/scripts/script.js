@@ -90,6 +90,7 @@ const quizDiv = document.getElementById("container");
 let questionTracking = document.getElementById("question-tracking");
 let startBtn = document.getElementById("start-btn");
 let reviewDiv = document.getElementById("review");
+const stars = document.querySelectorAll(".stars i");
 
 
 let currentQuestionIndex = 0;
@@ -141,7 +142,7 @@ function showQuestion(){
  * event listener added for next button so that next set of questions are shown.
  */
 
-nextbtn.addEventListener('click', function(){
+/*nextbtn.addEventListener('click', function(){
     if(currentQuestionIndex === questions.length){
         console.log("hereNow");
         welcomePageDiv.classList.remove("hide");
@@ -151,8 +152,20 @@ nextbtn.addEventListener('click', function(){
         console.log("here");
         handleNextBtn();
     }
-});
+}); 
 
+function handleNextBtn(){
+    currentQuestionIndex ++;
+    
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+        
+    }
+}*/
+
+nextbtn.addEventListener('click', handleNextBtn);
 function handleNextBtn(){
     currentQuestionIndex ++;
     
@@ -164,12 +177,16 @@ function handleNextBtn(){
     }
 }
 
+
 function showScore(){
     resetPrevious();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length} !`
+    questionTracking.style.display = "none";
+    reviewDiv.classList.remove("hide");
+
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length} !`;
     questionElement.style.textAlign = "center";
     
-    let result = document.createElement("h3");
+    /*let result = document.createElement("h3");
     if(score >= 7){
        
         result.innerText = "YOU ARE A HULK";
@@ -182,13 +199,20 @@ function showScore(){
     }
 
     answerBtn.append(result);
+    answerBtn.style.textAlign = "center"; */
 
-    nextbtn.style.display = "block";
-    nextbtn.innerText = "HOME";
-    nextbtn.style.fontSize = "1.5em";
-
+    const homeBtn = document.createElement("button");
+    homeBtn.classList.add("start-btn");
+    homeBtn.innerText = "Home";
+    document.body.append(homeBtn);
     
 
+
+
+    /*nextbtn.style.display = "block";
+    nextbtn.innerText = "HOME";
+    nextbtn.style.fontSize = "1.5em";
+    */
 }
 
 
@@ -227,3 +251,14 @@ function selectAnswer(event){
 }
 
 
+// Rating
+
+console.log(stars);
+
+stars.forEach((star, index1) => {
+    star.addEventListener('click', function(){
+        stars.forEach((star, index2) => {
+            index1 >= index2 ? star.classList.add("colored") : star.classList.remove("colored")
+        })
+    })
+})
