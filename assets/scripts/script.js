@@ -91,6 +91,7 @@ let questionTracking = document.getElementById("question-tracking");
 let startBtn = document.getElementById("start-btn");
 let reviewDiv = document.getElementById("review");
 const stars = document.querySelectorAll(".stars i");
+const homeBtn = document.getElementById("home-btn");
 
 
 let currentQuestionIndex = 0;
@@ -201,19 +202,21 @@ function showScore(){
     answerBtn.append(result);
     answerBtn.style.textAlign = "center"; */
 
-    const homeBtn = document.createElement("button");
-    homeBtn.classList.add("start-btn");
-    homeBtn.innerText = "Home";
-    document.body.append(homeBtn);
+    homeBtn.style.display = "block";
+    homeBtn.addEventListener('click',goHome);
+
+    function goHome(){
+        resetPrevious();
+        welcomePageDiv.classList.remove("hide");
+        quizDiv.classList.add("hide");
+        questionTracking.remove("hide");
+        reviewDiv.classList.add("hide");
+        homeBtn.style.display = "none";
+    }
     
-
-
-
-    /*nextbtn.style.display = "block";
-    nextbtn.innerText = "HOME";
-    nextbtn.style.fontSize = "1.5em";
-    */
 }
+
+
 
 
 /**EveryTime a new question is appended previous set of buttons 

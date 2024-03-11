@@ -157,7 +157,7 @@ font-weight: 800;
     display: none;
 }
 
-#next-btn:hover, .submit-btn:hover{
+#next-btn:hover, .submit-btn:hover, .home-btn:hover{
     background-color: hsl(240, 80%, 90%);
     color: #000;
     transition: 1s;
@@ -227,4 +227,19 @@ label{
 
 .colored{
     color: gold;
+}
+
+
+.home-btn{
+    width: 20em;
+    margin: 20px auto;
+    padding: 10px 40px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: hsl(240, 100%, 50%);
+    color: white;   
+    font-weight: 600;
+    cursor: pointer; 
+    display: none;
 }
