@@ -1,97 +1,97 @@
-const questions = [
+const QUESTIONS_CONFIG = [
     {
        question: "Who is known as the 'God of Thunder' in the Marvel Universe?",
        answers:[
-           {text: "Iron Man", correct:false},
-           {text: "Captain America", correct:false},
+           {text: "Iron Man"},
+           {text: "Captain America"},
            {text: "Thor", correct:true},
-           {text: "Hulk", correct:false},
+           {text: "Hulk"},
        ]
    },{
        question: "What is the name of Tony Stark's AI in the Iron Man suit?",
        answers:[
-           {text: "F.R.I.D.A.Y.", correct:false},
+           {text: "F.R.I.D.A.Y."},
            {text: "J.A.R.V.I.S.", correct:true},
-           {text: "H.E.R.B.I.E.", correct:false},
-           {text: "S.H.I.E.L.D.", correct:false},
+           {text: "H.E.R.B.I.E."},
+           {text: "S.H.I.E.L.D."},
        ]
    },{
        question: "Which of these characters is not a member of the Avengers?",
        answers:[
            {text: "Wolverine", correct:true},
-           {text: "Black Panther", correct:false},
-           {text: "Scarlet Witch", correct:false},
-           {text: "Hawkeye", correct:false},
+           {text: "Black Panther"},
+           {text: "Scarlet Witch"},
+           {text: "Hawkeye"},
        ]
    },{
        question: "Which Infinity Stone was embedded in Vision's forehead?",
        answers:[
-           {text: "Power Stone", correct:false},
-           {text: "Time Stone", correct:false},
-           {text: "Reality Stone", correct:false},
+           {text: "Power Stone"},
+           {text: "Time Stone"},
+           {text: "Reality Stone"},
            {text: "Mind Stone", correct:true},
        ]
    },{
        question: "What is the name of the fictional metal that Captain America's shield is made of?",
        answers:[
-           {text: "Adamantium", correct:false},
+           {text: "Adamantium"},
            {text: "Vibranium", correct:true},
-           {text: "Titanium", correct:false},
-           {text: "Plasteel", correct:false},
+           {text: "Titanium"},
+           {text: "Plasteel"},
        ]
    },{
        question: "What is the name of the dimension where Doctor Strange draws his mystical powers from?",
        answers:[
            {text: "Dark Dimension", correct:true},
-           {text: "Astral Plane", correct:false},
-           {text: "Quantum Realm", correct:false},
-           {text: "Mirror Dimension", correct:false},
+           {text: "Astral Plane"},
+           {text: "Quantum Realm"},
+           {text: "Mirror Dimension"},
        ]
    },{
        question: "What is the real name of the superhero Black Widow?",
        answers:[
-           {text: "Carol Danvers", correct:false},
-           {text: "Wanda Maximoff", correct:false},
-           {text: "Jessica Jones", correct:false},
+           {text: "Carol Danvers"},
+           {text: "Wanda Maximoff"},
+           {text: "Jessica Jones"},
            {text: "Natasha Romanoff", correct:true},
        ]
    },{
        question: "What is the name of the fictional planet that Thor comes from?",
        answers:[
-           {text: "Titan", correct:false},
-           {text: "Xandar", correct:false},
-           {text: "Sakaar", correct:false},
+           {text: "Titan"},
+           {text: "Xandar"},
+           {text: "Sakaar"},
            {text: "Asgard", correct:true},
        ]
    },{
        question: "What is the name of the powerful artifact sought after by Thanos in the Marvel Cinematic Universe?",
        answers:[
            {text: "Infinity Gauntlet", correct:true},
-           {text: "Aether", correct:false},
-           {text: "Orb", correct:false},
-           {text: "Tesseract", correct:false},
+           {text: "Aether"},
+           {text: "Orb"},
+           {text: "Tesseract"},
        ]
    },{
        question: "What is the name of Scott Lang's daughter?",
        answers:[
-           {text: "Hope", correct:false},
-           {text: "Janet", correct:false},
+           {text: "Hope"},
+           {text: "Janet"},
            {text: "Cassie", correct:true},
-           {text: "Peggy", correct:false},
+           {text: "Peggy"},
        ]
    }
 ]
 
-const questionElement = document.getElementById("questions");
-const answerBtn = document.getElementById("answer-btns");
-const nextbtn = document.getElementById("next-btn");
-const welcomePageDiv = document.getElementById("welcome-page");
-const quizDiv = document.getElementById("container");
+let questionElement = document.getElementById("questions");
+let answerBtnsContainer = document.getElementById("answer-btns");
+let nextBtn = document.getElementById("next-btn");
+let welcomePageDiv = document.getElementById("welcome-page");
+let quizDiv = document.getElementById("container");
 let questionTracking = document.getElementById("question-tracking");
 let startBtn = document.getElementById("start-btn");
 let reviewDiv = document.getElementById("review");
-const stars = document.querySelectorAll(".stars i");
-const homeBtn = document.getElementById("home-btn");
+let stars = document.querySelectorAll(".stars i");
+let homeBtn = document.getElementById("home-btn");
 
 
 let currentQuestionIndex = 0;
@@ -108,10 +108,18 @@ startBtn.addEventListener('click', function(){
 // function to start the quiz
 
 function startQuiz(){
-    let currentQuestionIndex = 0;
-    let score = 0;
-    nextbtn.innerHTML = "Next";
+    initEventListeners();
+    currentQuestionIndex = 0;
+    score = 0;
+    nextBtn.innerHTML = "Next";
     showQuestion(); // function to display questions from the questions array
+}
+
+function initEventListeners() {
+    nextBtn.addEventListener('click', handleNextBtn);
+    Array.from(answerBtnsContainer.children).forEach((eachAnswerBtn) => {
+        eachAnswerBtn.addEventListener('click', selectAnswer);
+    });
 }
 
 /**
@@ -119,58 +127,39 @@ function startQuiz(){
  */
 function showQuestion(){
     resetPrevious()
-    let currentQuestion = questions[currentQuestionIndex];
+    let currentQuestion = QUESTIONS_CONFIG[currentQuestionIndex];
     let questionNumber = currentQuestionIndex + 1;
     questionElement.innerHTML = currentQuestion.question;
-    questionTracking.innerHTML = `${questionNumber} of ${questions.length} questions`;
+    questionTracking.innerHTML = `${questionNumber} of ${QUESTIONS_CONFIG.length} questions`;
 
-    for(answer of currentQuestion.answers){
-        const button = document.createElement("button");
-        button.innerHTML = answer.text;
-        button.classList.add("btn");
-        answerBtn.append(button);
-        if(answer.correct){
-            button.dataset.correct = answer.correct;
+    answerBtnsContainer.classList.remove("hide");
+
+    Array.from(answerBtnsContainer.children).forEach((eachAnswerBtn, idx) => {
+        const answer = currentQuestion.answers[idx];
+        eachAnswerBtn.innerHTML = answer.text;
+        resetAnswerBtnStyle(eachAnswerBtn);
+
+        if (answer.correct) {
+            eachAnswerBtn.dataset.correct = true;
         }
-        
-        button.addEventListener('click',selectAnswer)
-        
-    }
+    });
 
+
+    
 }
 
-/**
- * event listener added for next button so that next set of questions are shown.
- */
+function resetAnswerBtnStyle(answerBtn) {
+    answerBtn.classList.remove("correct");
+    answerBtn.classList.remove("incorrect");
+    answerBtn.disabled = false;
+    answerBtn.dataset.correct = false;
+}
 
-/*nextbtn.addEventListener('click', function(){
-    if(currentQuestionIndex === questions.length){
-        console.log("hereNow");
-        welcomePageDiv.classList.remove("hide");
-        quizDiv.classList.add("hide");
-
-    }else{
-        console.log("here");
-        handleNextBtn();
-    }
-}); 
 
 function handleNextBtn(){
     currentQuestionIndex ++;
     
-    if(currentQuestionIndex < questions.length){
-        showQuestion();
-    }else{
-        showScore();
-        
-    }
-}*/
-
-nextbtn.addEventListener('click', handleNextBtn);
-function handleNextBtn(){
-    currentQuestionIndex ++;
-    
-    if(currentQuestionIndex < questions.length){
+    if(currentQuestionIndex < QUESTIONS_CONFIG.length){
         showQuestion();
     }else{
         showScore();
@@ -183,37 +172,23 @@ function showScore(){
     resetPrevious();
     questionTracking.style.display = "none";
     reviewDiv.classList.remove("hide");
+    answerBtnsContainer.classList.add("hide");
 
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length} !`;
+    questionElement.innerHTML = `You scored ${score} out of ${QUESTIONS_CONFIG.length} !`;
     questionElement.style.textAlign = "center";
-    
-    /*let result = document.createElement("h3");
-    if(score >= 7){
-       
-        result.innerText = "YOU ARE A HULK";
-    } else if(score >= 4 ){
-        result.innerText = "YOU DID GOOOOOOD !";
-
-    }else{
-        console.log(result);
-        result.innerText = "AHMMMMMMMMM, OKayyyyyyyy !!!"
-    }
-
-    answerBtn.append(result);
-    answerBtn.style.textAlign = "center"; */
 
     homeBtn.style.display = "block";
     homeBtn.addEventListener('click',goHome);
-
-    function goHome(){
-        resetPrevious();
-        welcomePageDiv.classList.remove("hide");
-        quizDiv.classList.add("hide");
-        questionTracking.remove("hide");
-        reviewDiv.classList.add("hide");
-        homeBtn.style.display = "none";
-    }
     
+}
+
+function goHome(){
+    resetPrevious();
+    welcomePageDiv.classList.remove("hide");
+    quizDiv.classList.add("hide");
+    questionTracking.remove("hide");
+    reviewDiv.classList.add("hide");
+    homeBtn.style.display = "none";
 }
 
 
@@ -223,10 +198,7 @@ function showScore(){
  * will be removed. 
  */
 function resetPrevious(){
-    nextbtn.style.display = "none";
-    while(answerBtn.firstChild){
-        answerBtn.removeChild(answerBtn.firstChild);
-    }
+    nextBtn.style.display = "none";
 
 }
 
@@ -241,7 +213,7 @@ function selectAnswer(event){
     selectedBtn.classList.add("incorrect");
    }
    
-   let childrenFromAnswerBtn = Array.from(answerBtn.children);
+   let childrenFromAnswerBtn = Array.from(answerBtnsContainer.children);
    for(childBtn of childrenFromAnswerBtn){
     if(childBtn.dataset.correct === "true"){
         childBtn.classList.add("correct");
@@ -249,7 +221,7 @@ function selectAnswer(event){
     childBtn.disabled = true;
 
    }
-   nextbtn.style.display = "block";
+   nextBtn.style.display = "block";
 
 }
 
