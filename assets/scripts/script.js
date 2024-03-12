@@ -319,7 +319,7 @@ reviewSubmitBtn.addEventListener('click', function () {
     if (ratingValue.value === "" || ratingValue.value === null) {
         window.alert("Please provide us a rating.");
     }
-    ratingValue.value = 5;
+    
 })
 
 

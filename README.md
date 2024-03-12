@@ -45,18 +45,30 @@ The user will be provided with a question along with four options, among which o
 - Header
 	- Featured at the top of the page, the header shows the game name: MarvelManiA in a font that is visible and a contrasts with the background
 
+    <img src="assets/images/header.png" alt="Header" width=500 height=50>
+
 - Main
 	- A Welcome container with a button to start the quiz.
 	- It also contains a brief instruction for the users.
-	
+
+    <img src="assets/images/start-section.png" alt="start-section" width=300 height=400>
+    	
 	- Once the start button is clicked quiz container is shown with a question and 4 options. You can track the number of questions on the top.
 	- When the right answer is clicked, it is highlighted with green also increasing the score. If a wrong answer is chosen it is highlighted with red, and the right answer is shown to the user.
+
+    <img src="assets/images/quiz1.png" alt="quiz with right answer selected" width=250 height=400>
+    <br>
+    <img src="assets/images/quiz2.png" alt="quiz with wrong answer selected" width=250 height=400>
+    <br>
+    <img src="assets/images/score-review.png" alt="score and review section" width=250 height=400>
 
 	- once all the questions are answered, the score is displayed at the end.
 	- A review container is displayed, where the user can provide a star rating and suggestions/feedback.
 
 - Footer
 	- Copyright is displayed.
+
+    <img src="assets/images/footer.png" alt="Footer" width=300 height=50>
 
 ## Future-Features
 - I would like to take the quiz to another level by adding a few more features like adding buttons at the welcome container where the user can choose which genre the quiz can be asked from. 
