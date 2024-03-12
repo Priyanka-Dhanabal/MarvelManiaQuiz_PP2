@@ -19,7 +19,7 @@
         rel="stylesheet">
 
     <!--CSS-->
-    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 
         <!-- Container for Welcome page -->
 
-        <div id="welcome-page" class="welcome-page  ">
+        <div id="welcome-page" class="welcome-page hide ">
             <P>Are you a Marvel Fan?</P>
 
             <button id="start-btn">START</button><br>
@@ -65,21 +65,22 @@
 
         </div>
 
-        <div id="review" class="review hide">
+        <div id="review" class="review">
+            <h3>Give us a rating:</h3>
             <form action="https://formdump.codeinstitute.net" method="post">
-                <h3>Give us a rating:</h3>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                
+                <div class="rating">
+                    <input type="number" name="rating" hidden>
+                    <i class="fa-solid fa-star star"></i>
+                    <i class="fa-solid fa-star star"></i>
+                    <i class="fa-solid fa-star star"></i>
+                    <i class="fa-solid fa-star star"></i>
+                    <i class="fa-solid fa-star star"></i>
                 </div>
                 <br>
-
                 <label for="suggestion">Any Suggestions?</label><br>
-                <textarea id="suggestion" class="suggestion" rows="3" cols="30"></textarea><br>
-                <button class="submit-btn">Submit</button>
+                <textarea id="suggestion" class="suggestion" rows="3" cols="25" placeholder="I love it !"></textarea><br>
+                <button type="submit" class="submit-btn">Submit</button>
             </form>
 
         </div>
