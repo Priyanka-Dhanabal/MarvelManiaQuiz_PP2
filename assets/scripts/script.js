@@ -171,6 +171,7 @@ let reviewDiv = document.getElementById("review");
 let stars = document.querySelectorAll(".rating .star");
 let homeBtn = document.getElementById("home-btn");
 let ratingValue = document.querySelector(".rating input");
+let resultImage = document.getElementsByTagName("img")[0];
 
 
 let currentQuestionIndex = 0;
@@ -187,6 +188,7 @@ startBtn.addEventListener('click', function () {
 // Function to start the quiz
 
 function startQuiz() {
+    
     initEventListeners();
     currentQuestionIndex = 0;
     score = 0;
@@ -254,6 +256,7 @@ function handleNextBtn() {
  */
 function showScore() {
     resetPrevious();
+    reviewDiv.parentElement.parentElement.style.height = "100%";
     questionTracking.style.display = "none";
     reviewDiv.classList.remove("hide");
     answerBtnsContainer.classList.add("hide");
@@ -263,6 +266,25 @@ function showScore() {
 
     homeBtn.style.display = "block";
     homeBtn.addEventListener('click', goHome);
+
+    resultImage.style.display = "block";
+
+    if(score <= 3){
+        resultImage.src = "assets/images/200(2).gif";
+        resultImage.alt = "hulk beats thor from thor ragnarok";
+    }
+    else if( score <= 5){
+        resultImage.src = "assets/images/captain.gif";
+        resultImage.alt = "Captain feeling disapointed";
+    }
+    else if( score<= 7){
+        resultImage.src = "assets/images/kneel.gif";
+        resultImage.alt = "Loki from avengers stating kneel";
+    }
+    else if(score > 7){
+        resultImage.src = "assets/images/thanos.gif";
+        resultImage.alt = "Thanos from avengers endgame";
+    }
 
 }
 
@@ -275,6 +297,7 @@ function goHome() {
     questionTracking.remove("hide");
     reviewDiv.classList.add("hide");
     homeBtn.style.display = "none";
+    resultImage.style.display = "none";
 }
 
 /** Hides the next Button before displaying next question.

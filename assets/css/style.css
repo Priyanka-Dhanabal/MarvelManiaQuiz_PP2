@@ -10,8 +10,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-
+    min-height: 100vh;
 }
 
 
@@ -186,6 +185,13 @@ h1 {
     cursor: no-drop;
 }
 
+img{
+    width: 70%;
+    position: relative;
+    left: 15%;
+    display: none;
+}
+
 /*Review Div*/
 
 .review {
@@ -262,10 +268,9 @@ label {
 /*Footer*/
 
 #copyright {
+    margin: 40px 10px auto;
     color: white;
-    position: absolute;
-    bottom: 0;
-    right: 20px;
     font-family: 'Protest Revolution', sans-serif;
     letter-spacing: 2px;
+    
 }
