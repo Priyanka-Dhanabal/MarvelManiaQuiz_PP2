@@ -12,7 +12,7 @@ You can check out my Repository [here]()
 
  1. [ UX ](#ux)
  2. [ Features ](#features)
- 3. [ Future Feature ](#future-feature)  
+ 3. [ Future Feature ](#future-features)  
  4. [ Technology used ](#technologies-used) 
  5. [ Testing ](#testing)  
  6. [ Bugs ](#bugs)  
