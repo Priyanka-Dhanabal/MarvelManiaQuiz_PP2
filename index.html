@@ -30,7 +30,7 @@
 
         <!-- Container for Welcome page -->
 
-        <div id="welcome-page" class="welcome-page hide ">
+        <div id="welcome-page" class="welcome-page ">
             <P>Are you a Marvel Fan?</P>
 
             <button id="start-btn">START</button><br>
@@ -65,12 +65,14 @@
 
         </div>
 
+         <!-- Container for review -->
+
         <div id="review" class="review">
             <h3>Give us a rating:</h3>
             <form action="https://formdump.codeinstitute.net" method="post">
                 
                 <div class="rating">
-                    <input type="number" name="rating" hidden>
+                    <input type="number" name="rating" value="" hidden>
                     <i class="fa-solid fa-star star"></i>
                     <i class="fa-solid fa-star star"></i>
                     <i class="fa-solid fa-star star"></i>
@@ -79,7 +81,7 @@
                 </div>
                 <br>
                 <label for="suggestion">Any Suggestions?</label><br>
-                <textarea id="suggestion" class="suggestion" rows="3" cols="25" placeholder="I love it !"></textarea><br>
+                <textarea id="suggestion" class="suggestion" name="suggestion" rows="3" cols="25" placeholder="I love it !" required></textarea><br>
                 <button type="submit" class="submit-btn">Submit</button>
             </form>
 

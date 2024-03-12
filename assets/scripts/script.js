@@ -90,8 +90,9 @@ let quizDiv = document.getElementById("container");
 let questionTracking = document.getElementById("question-tracking");
 let startBtn = document.getElementById("start-btn");
 let reviewDiv = document.getElementById("review");
-let stars = document.querySelectorAll(".stars i");
+let stars = document.querySelectorAll(".rating .star");
 let homeBtn = document.getElementById("home-btn");
+let ratingValue = document.querySelector(".rating input");
 
 
 let currentQuestionIndex = 0;
@@ -105,7 +106,7 @@ startBtn.addEventListener('click', function(){
     startQuiz();
 })
 
-// function to start the quiz
+// Function to start the quiz
 
 function startQuiz(){
     initEventListeners();
@@ -123,7 +124,7 @@ function initEventListeners() {
 }
 
 /**
- * questions pulled from the array and getting updated.
+ * Question and answer getting updated from QUESTIONS_CONFIG array.
  */
 function showQuestion(){
     resetPrevious()
@@ -148,6 +149,9 @@ function showQuestion(){
     
 }
 
+/**Class are removed, which was set in showQuestions function.
+ */
+
 function resetAnswerBtnStyle(answerBtn) {
     answerBtn.classList.remove("correct");
     answerBtn.classList.remove("incorrect");
@@ -155,7 +159,8 @@ function resetAnswerBtnStyle(answerBtn) {
     answerBtn.dataset.correct = false;
 }
 
-
+/** Increments the currentQuestionIndex and checks the QUESTIONS_CONFIG length.
+ */
 function handleNextBtn(){
     currentQuestionIndex ++;
     
@@ -167,7 +172,8 @@ function handleNextBtn(){
     }
 }
 
-
+/** Once the currentQuestionIndex is >= QUESTIONS_CONFIG length, score obtained is displayed.
+ */
 function showScore(){
     resetPrevious();
     questionTracking.style.display = "none";
@@ -182,6 +188,8 @@ function showScore(){
     
 }
 
+/** Home button is clicked, paged reverts to initial state, i.e welcome Page is shown.
+ */
 function goHome(){
     resetPrevious();
     welcomePageDiv.classList.remove("hide");
@@ -191,17 +199,16 @@ function goHome(){
     homeBtn.style.display = "none";
 }
 
-
-
-
-/**EveryTime a new question is appended previous set of buttons 
- * will be removed. 
+/** Hides the next Button before displaying next question.
  */
 function resetPrevious(){
     nextBtn.style.display = "none";
-
 }
 
+
+/** Checks if the answer selected has dataset correct and 
+ * increments the score, else correct answer is displayed.
+ */
 function selectAnswer(event){
    let selectedBtn = event.target;
    const isCorrect = selectedBtn.dataset.correct === "true";
@@ -214,7 +221,7 @@ function selectAnswer(event){
    }
    
    let childrenFromAnswerBtn = Array.from(answerBtnsContainer.children);
-   for(childBtn of childrenFromAnswerBtn){
+   for(let childBtn of childrenFromAnswerBtn){
     if(childBtn.dataset.correct === "true"){
         childBtn.classList.add("correct");
     }
@@ -228,12 +235,22 @@ function selectAnswer(event){
 
 // Rating
 
-console.log(stars);
+let reviewSubmitBtn = document.querySelector(".submit-btn");
+reviewSubmitBtn.addEventListener('click',function(){
+    
+    if(ratingValue.value === "" || ratingValue.value === null){
+        window.alert("Please provide us a rating.");
+        }
+    ratingValue.value = 5;      
+})
+
 
 stars.forEach((star, index1) => {
     star.addEventListener('click', function(){
+        ratingValue.value = index1 + 1;  
         stars.forEach((star, index2) => {
             index1 >= index2 ? star.classList.add("colored") : star.classList.remove("colored")
         })
     })
 })
+
