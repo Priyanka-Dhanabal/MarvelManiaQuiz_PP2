@@ -18,6 +18,11 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Protest+Revolution&display=swap"
         rel="stylesheet">
 
+    <!--FavICON-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -58,19 +63,19 @@
                     <button class="btn">Answer 1</button>
                     <button class="btn">Answer 2</button>
                     <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button> 
+                    <button class="btn">Answer 4</button>
                 </div>
                 <button id="next-btn">Next</button>
             </div>
 
         </div>
 
-         <!-- Container for review -->
+        <!-- Container for review -->
 
-        <div id="review" class="review">
+        <div id="review" class="review hide">
             <h3>Give us a rating:</h3>
             <form action="https://formdump.codeinstitute.net" method="post">
-                
+
                 <div class="rating">
                     <input type="number" name="rating" value="" hidden>
                     <i class="fa-solid fa-star star"></i>
@@ -81,7 +86,8 @@
                 </div>
                 <br>
                 <label for="suggestion">Any Suggestions?</label><br>
-                <textarea id="suggestion" class="suggestion" name="suggestion" rows="3" cols="25" placeholder="I love it !" required></textarea><br>
+                <textarea id="suggestion" class="suggestion" name="suggestion" rows="3" cols="25"
+                    placeholder="I love it !" required></textarea><br>
                 <button type="submit" class="submit-btn">Submit</button>
             </form>
 
@@ -91,7 +97,7 @@
 
         <script src="https://kit.fontawesome.com/0f5fd35744.js" crossorigin="anonymous"></script>
         <script src="assets/scripts/script.js"></script>
-  
+
     </main>
 
     <footer>

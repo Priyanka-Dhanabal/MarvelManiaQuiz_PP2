@@ -1,86 +1,164 @@
-const QUESTIONS_CONFIG = [
-    {
-       question: "Who is known as the 'God of Thunder' in the Marvel Universe?",
-       answers:[
-           {text: "Iron Man"},
-           {text: "Captain America"},
-           {text: "Thor", correct:true},
-           {text: "Hulk"},
-       ]
-   },{
-       question: "What is the name of Tony Stark's AI in the Iron Man suit?",
-       answers:[
-           {text: "F.R.I.D.A.Y."},
-           {text: "J.A.R.V.I.S.", correct:true},
-           {text: "H.E.R.B.I.E."},
-           {text: "S.H.I.E.L.D."},
-       ]
-   },{
-       question: "Which of these characters is not a member of the Avengers?",
-       answers:[
-           {text: "Wolverine", correct:true},
-           {text: "Black Panther"},
-           {text: "Scarlet Witch"},
-           {text: "Hawkeye"},
-       ]
-   },{
-       question: "Which Infinity Stone was embedded in Vision's forehead?",
-       answers:[
-           {text: "Power Stone"},
-           {text: "Time Stone"},
-           {text: "Reality Stone"},
-           {text: "Mind Stone", correct:true},
-       ]
-   },{
-       question: "What is the name of the fictional metal that Captain America's shield is made of?",
-       answers:[
-           {text: "Adamantium"},
-           {text: "Vibranium", correct:true},
-           {text: "Titanium"},
-           {text: "Plasteel"},
-       ]
-   },{
-       question: "What is the name of the dimension where Doctor Strange draws his mystical powers from?",
-       answers:[
-           {text: "Dark Dimension", correct:true},
-           {text: "Astral Plane"},
-           {text: "Quantum Realm"},
-           {text: "Mirror Dimension"},
-       ]
-   },{
-       question: "What is the real name of the superhero Black Widow?",
-       answers:[
-           {text: "Carol Danvers"},
-           {text: "Wanda Maximoff"},
-           {text: "Jessica Jones"},
-           {text: "Natasha Romanoff", correct:true},
-       ]
-   },{
-       question: "What is the name of the fictional planet that Thor comes from?",
-       answers:[
-           {text: "Titan"},
-           {text: "Xandar"},
-           {text: "Sakaar"},
-           {text: "Asgard", correct:true},
-       ]
-   },{
-       question: "What is the name of the powerful artifact sought after by Thanos in the Marvel Cinematic Universe?",
-       answers:[
-           {text: "Infinity Gauntlet", correct:true},
-           {text: "Aether"},
-           {text: "Orb"},
-           {text: "Tesseract"},
-       ]
-   },{
-       question: "What is the name of Scott Lang's daughter?",
-       answers:[
-           {text: "Hope"},
-           {text: "Janet"},
-           {text: "Cassie", correct:true},
-           {text: "Peggy"},
-       ]
-   }
-]
+const QUESTIONS_CONFIG = [{
+    question: "Who is known as the 'God of Thunder' in the Marvel Universe?",
+    answers: [{
+            text: "Iron Man"
+        },
+        {
+            text: "Captain America"
+        },
+        {
+            text: "Thor",
+            correct: true
+        },
+        {
+            text: "Hulk"
+        },
+    ]
+}, {
+    question: "What is the name of Tony Stark's AI in the Iron Man suit?",
+    answers: [{
+            text: "F.R.I.D.A.Y."
+        },
+        {
+            text: "J.A.R.V.I.S.",
+            correct: true
+        },
+        {
+            text: "H.E.R.B.I.E."
+        },
+        {
+            text: "S.H.I.E.L.D."
+        },
+    ]
+}, {
+    question: "Which of these characters is not a member of the Avengers?",
+    answers: [{
+            text: "Wolverine",
+            correct: true
+        },
+        {
+            text: "Black Panther"
+        },
+        {
+            text: "Scarlet Witch"
+        },
+        {
+            text: "Hawkeye"
+        },
+    ]
+}, {
+    question: "Which Infinity Stone was embedded in Vision's forehead?",
+    answers: [{
+            text: "Power Stone"
+        },
+        {
+            text: "Time Stone"
+        },
+        {
+            text: "Reality Stone"
+        },
+        {
+            text: "Mind Stone",
+            correct: true
+        },
+    ]
+}, {
+    question: "What is the name of the fictional metal that Captain America's shield is made of?",
+    answers: [{
+            text: "Adamantium"
+        },
+        {
+            text: "Vibranium",
+            correct: true
+        },
+        {
+            text: "Titanium"
+        },
+        {
+            text: "Plasteel"
+        },
+    ]
+}, {
+    question: "What is the name of the dimension where Doctor Strange draws his mystical powers from?",
+    answers: [{
+            text: "Dark Dimension",
+            correct: true
+        },
+        {
+            text: "Astral Plane"
+        },
+        {
+            text: "Quantum Realm"
+        },
+        {
+            text: "Mirror Dimension"
+        },
+    ]
+}, {
+    question: "What is the real name of the superhero Black Widow?",
+    answers: [{
+            text: "Carol Danvers"
+        },
+        {
+            text: "Wanda Maximoff"
+        },
+        {
+            text: "Jessica Jones"
+        },
+        {
+            text: "Natasha Romanoff",
+            correct: true
+        },
+    ]
+}, {
+    question: "What is the name of the fictional planet that Thor comes from?",
+    answers: [{
+            text: "Titan"
+        },
+        {
+            text: "Xandar"
+        },
+        {
+            text: "Sakaar"
+        },
+        {
+            text: "Asgard",
+            correct: true
+        },
+    ]
+}, {
+    question: "What is the name of the powerful artifact sought after by Thanos in the Marvel Cinematic Universe?",
+    answers: [{
+            text: "Infinity Gauntlet",
+            correct: true
+        },
+        {
+            text: "Aether"
+        },
+        {
+            text: "Orb"
+        },
+        {
+            text: "Tesseract"
+        },
+    ]
+}, {
+    question: "What is the name of Scott Lang's daughter?",
+    answers: [{
+            text: "Hope"
+        },
+        {
+            text: "Janet"
+        },
+        {
+            text: "Cassie",
+            correct: true
+        },
+        {
+            text: "Peggy"
+        },
+    ]
+}]
 
 let questionElement = document.getElementById("questions");
 let answerBtnsContainer = document.getElementById("answer-btns");
@@ -100,7 +178,7 @@ let score = 0;
 
 // Event Listener for the Start Button in Welcome Page
 
-startBtn.addEventListener('click', function(){
+startBtn.addEventListener('click', function () {
     welcomePageDiv.classList.add("hide");
     quizDiv.classList.remove("hide");
     startQuiz();
@@ -108,7 +186,7 @@ startBtn.addEventListener('click', function(){
 
 // Function to start the quiz
 
-function startQuiz(){
+function startQuiz() {
     initEventListeners();
     currentQuestionIndex = 0;
     score = 0;
@@ -126,7 +204,7 @@ function initEventListeners() {
 /**
  * Question and answer getting updated from QUESTIONS_CONFIG array.
  */
-function showQuestion(){
+function showQuestion() {
     resetPrevious()
     let currentQuestion = QUESTIONS_CONFIG[currentQuestionIndex];
     let questionNumber = currentQuestionIndex + 1;
@@ -146,7 +224,7 @@ function showQuestion(){
     });
 
 
-    
+
 }
 
 /**Class are removed, which was set in showQuestions function.
@@ -161,20 +239,20 @@ function resetAnswerBtnStyle(answerBtn) {
 
 /** Increments the currentQuestionIndex and checks the QUESTIONS_CONFIG length.
  */
-function handleNextBtn(){
-    currentQuestionIndex ++;
-    
-    if(currentQuestionIndex < QUESTIONS_CONFIG.length){
+function handleNextBtn() {
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < QUESTIONS_CONFIG.length) {
         showQuestion();
-    }else{
+    } else {
         showScore();
-        
+
     }
 }
 
 /** Once the currentQuestionIndex is >= QUESTIONS_CONFIG length, score obtained is displayed.
  */
-function showScore(){
+function showScore() {
     resetPrevious();
     questionTracking.style.display = "none";
     reviewDiv.classList.remove("hide");
@@ -184,13 +262,13 @@ function showScore(){
     questionElement.style.textAlign = "center";
 
     homeBtn.style.display = "block";
-    homeBtn.addEventListener('click',goHome);
-    
+    homeBtn.addEventListener('click', goHome);
+
 }
 
 /** Home button is clicked, paged reverts to initial state, i.e welcome Page is shown.
  */
-function goHome(){
+function goHome() {
     resetPrevious();
     welcomePageDiv.classList.remove("hide");
     quizDiv.classList.add("hide");
@@ -201,7 +279,7 @@ function goHome(){
 
 /** Hides the next Button before displaying next question.
  */
-function resetPrevious(){
+function resetPrevious() {
     nextBtn.style.display = "none";
 }
 
@@ -209,26 +287,26 @@ function resetPrevious(){
 /** Checks if the answer selected has dataset correct and 
  * increments the score, else correct answer is displayed.
  */
-function selectAnswer(event){
-   let selectedBtn = event.target;
-   const isCorrect = selectedBtn.dataset.correct === "true";
-   if(isCorrect){
-    selectedBtn.classList.add("correct");
-    score ++;
+function selectAnswer(event) {
+    let selectedBtn = event.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if (isCorrect) {
+        selectedBtn.classList.add("correct");
+        score++;
 
-   }else{
-    selectedBtn.classList.add("incorrect");
-   }
-   
-   let childrenFromAnswerBtn = Array.from(answerBtnsContainer.children);
-   for(let childBtn of childrenFromAnswerBtn){
-    if(childBtn.dataset.correct === "true"){
-        childBtn.classList.add("correct");
+    } else {
+        selectedBtn.classList.add("incorrect");
     }
-    childBtn.disabled = true;
 
-   }
-   nextBtn.style.display = "block";
+    let childrenFromAnswerBtn = Array.from(answerBtnsContainer.children);
+    for (let childBtn of childrenFromAnswerBtn) {
+        if (childBtn.dataset.correct === "true") {
+            childBtn.classList.add("correct");
+        }
+        childBtn.disabled = true;
+
+    }
+    nextBtn.style.display = "block";
 
 }
 
@@ -236,21 +314,20 @@ function selectAnswer(event){
 // Rating
 
 let reviewSubmitBtn = document.querySelector(".submit-btn");
-reviewSubmitBtn.addEventListener('click',function(){
-    
-    if(ratingValue.value === "" || ratingValue.value === null){
+reviewSubmitBtn.addEventListener('click', function () {
+
+    if (ratingValue.value === "" || ratingValue.value === null) {
         window.alert("Please provide us a rating.");
-        }
-    ratingValue.value = 5;      
+    }
+    ratingValue.value = 5;
 })
 
 
 stars.forEach((star, index1) => {
-    star.addEventListener('click', function(){
-        ratingValue.value = index1 + 1;  
+    star.addEventListener('click', function () {
+        ratingValue.value = index1 + 1;
         stars.forEach((star, index2) => {
             index1 >= index2 ? star.classList.add("colored") : star.classList.remove("colored")
         })
     })
 })
-

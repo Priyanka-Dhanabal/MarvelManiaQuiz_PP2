@@ -1,21 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
-body{
+
+body {
     background-image: url("../images/marvel.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    
+
 }
 
 
 
-h1{
+h1 {
     text-align: center;
     margin: 20px;
     padding: 20px;
@@ -30,7 +31,7 @@ h1{
 
 
 
-.welcome-page{
+.welcome-page {
     width: 90%;
     max-width: 600px;
     background-color: hsl(0deg 0% 0% / 70%);
@@ -42,24 +43,26 @@ h1{
     border-radius: 10px;
     color: #fff;
 }
+
 .welcome-page p {
-padding: 10px;
-margin: 5px 0;
-font-size: 1.9em;
-letter-spacing: 0.5px;
-font-weight: 800;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1.9em;
+    letter-spacing: 0.5px;
+    font-weight: 800;
 }
 
 
 
-#welcome-tag{
+#welcome-tag {
     font-size: 2em;
     margin: 10px 0;
 }
 
-#start-btn{
+#start-btn {
     width: 10em;
-    margin: 30px 10px 0;;
+    margin: 30px 10px 0;
+    ;
     padding: 10px;
     font-size: 1.5em;
     font-weight: 700;
@@ -71,35 +74,35 @@ font-weight: 800;
     cursor: pointer;
 }
 
-#start-btn:hover{
+#start-btn:hover {
     background-color: hsl(240, 80%, 90%);
     color: #000;
     transition: 1s;
 }
 
-#instruction{
+#instruction {
     margin-top: 2.5em;
 }
 
-#instruction h2{
+#instruction h2 {
     font-size: 2em;
     margin-bottom: 1em;
     text-decoration: underline;
     letter-spacing: 1px;
 }
 
-#instruction p{
+#instruction p {
     font-size: 1.5em;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
 /*Applying style for everything quiz container*/
 
-.quiz-container{
-        
+.quiz-container {
+
     text-align: left;
     background-color: hsl(0deg 0% 0% / 70%);
     width: 90%;
@@ -111,21 +114,21 @@ font-weight: 800;
     font-family: "Protest Revolution", sans-serif;
 }
 
-#question-tracking{
-    margin:20px 0;
+#question-tracking {
+    margin: 20px 0;
     border-bottom: 1px solid #fff;
     display: flex;
     justify-content: end;
 }
 
-#questions{
+#questions {
 
     font-size: 1.6em;
     margin: 25px 0;
 
 }
 
-.quiz .btn{
+.quiz .btn {
     background-color: #4e4d4d42;
     color: #fff;
     font-weight: 900;
@@ -137,51 +140,55 @@ font-weight: 800;
     border-radius: 8px;
     font-family: "Protest Revolution", sans-serif;
     font-size: 1.3em;
-    cursor:pointer;
-    
+    cursor: pointer;
+
 }
 
-.quiz .btn:hover{
+.quiz .btn:hover {
     box-shadow: 5px 5px 5px #a8a8a8;
     transition: 0.5s;
 }
-#next-btn, .submit-btn{
+
+#next-btn,
+.submit-btn {
     margin: 20px auto;
     padding: 10px 40px;
     font-size: 15px;
     border-radius: 8px;
     border: none;
     background-color: hsl(240, 100%, 50%);
-    color: white;   
+    color: white;
     font-weight: 600;
-    cursor: pointer; 
+    cursor: pointer;
     display: none;
 }
 
-#next-btn:hover, .submit-btn:hover, .home-btn:hover{
+#next-btn:hover,
+.submit-btn:hover,
+.home-btn:hover {
     background-color: hsl(240, 80%, 90%);
     color: #000;
     transition: 1s;
 }
 
-.correct{
-    
+.correct {
+
     background: linear-gradient(180deg, #bdf0bd, #17cf17, #76d376);
-    color:#000;
+    color: #000;
 }
 
-.incorrect{
+.incorrect {
     background: linear-gradient(180deg, #f3afaa, #f76d63, #f36c62);
-    color:#000;
+    color: #000;
 }
 
-.btn:disabled{
+.btn:disabled {
     cursor: no-drop;
 }
 
 /*Review Div*/
 
-.review{
+.review {
     text-align: center;
     background-color: hsl(0deg 0% 0% / 70%);
     width: 90%;
@@ -191,32 +198,32 @@ font-weight: 800;
     padding: 10px;
     border-radius: 10px;
     font-family: "Protest Revolution", sans-serif;
-         
+
 }
 
-.review h3{
+.review h3 {
     font-size: 1.5em;
     margin-bottom: 20px;
     font-weight: 500;
 }
 
-.star{
+.star {
     margin: 0 5px 15px;
     font-size: 1.6em;
     color: #5c5b5b;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-.star:hover{
+.star:hover {
     transform: scale(1.2);
 }
 
-label{
+label {
     font-size: 1.5em;
     font-weight: 500;
-    }
+}
 
-#suggestion{
+#suggestion {
     margin: 20px;
     font-size: 1.5em;
     background-color: transparent;
@@ -227,18 +234,18 @@ label{
     width: 90%;
 }
 
-.submit-btn{
+.submit-btn {
     display: block;
 
 }
 
-.colored{
+.colored {
     color: gold;
 }
 
 
 
-.home-btn{
+.home-btn {
     width: 20em;
     margin: 20px auto;
     padding: 10px 40px;
@@ -246,15 +253,15 @@ label{
     border-radius: 8px;
     border: none;
     background-color: hsl(240, 100%, 50%);
-    color: white;   
+    color: white;
     font-weight: 600;
-    cursor: pointer; 
+    cursor: pointer;
     display: none;
 }
 
 /*Footer*/
 
-#copyright{
+#copyright {
     color: white;
     position: absolute;
     bottom: 0;
