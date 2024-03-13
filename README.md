@@ -38,6 +38,16 @@ The user will be provided with a question along with four options, among which o
 
 #### As the site administrator:
 
+ ### Design
+
+ - Colours: 
+    - Text: #fff
+    - Body Background: Marvel Image taken from Google Images
+    - Container Background: hsl(0deg 0% 0% / 70%);
+
+ - Typography:
+    - Text: Imported **Protest Revolution** from google font.
+
 ### Wireframes
 
 
