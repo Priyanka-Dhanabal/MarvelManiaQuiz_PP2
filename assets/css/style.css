@@ -11,6 +11,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -267,10 +269,14 @@ label {
 
 /*Footer*/
 
+footer{
+    margin-top: auto;
+}
+
 #copyright {
     margin: 40px 10px auto;
     color: white;
     font-family: 'Protest Revolution', sans-serif;
     letter-spacing: 2px;
-    
+    text-align: center;
 }
