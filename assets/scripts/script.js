@@ -158,7 +158,7 @@ const QUESTIONS_CONFIG = [{
             text: "Peggy"
         },
     ]
-}]
+}];
 
 let questionElement = document.getElementById("questions");
 let answerBtnsContainer = document.getElementById("answer-btns");
@@ -183,7 +183,7 @@ startBtn.addEventListener('click', function () {
     welcomePageDiv.classList.add("hide");
     quizDiv.classList.remove("hide");
     startQuiz();
-})
+});
 
 // Function to start the quiz
 
@@ -207,7 +207,7 @@ function initEventListeners() {
  * Question and answer getting updated from QUESTIONS_CONFIG array.
  */
 function showQuestion() {
-    resetPrevious()
+    resetPrevious();
     let currentQuestion = QUESTIONS_CONFIG[currentQuestionIndex];
     let questionNumber = currentQuestionIndex + 1;
     questionElement.innerHTML = currentQuestion.question;
@@ -343,14 +343,18 @@ reviewSubmitBtn.addEventListener('click', function () {
         window.alert("Please provide us a rating.");
     }
     
-})
+});
 
 
 stars.forEach((star, index1) => {
     star.addEventListener('click', function () {
         ratingValue.value = index1 + 1;
         stars.forEach((star, index2) => {
-            index1 >= index2 ? star.classList.add("colored") : star.classList.remove("colored")
-        })
-    })
-})
+            if(index1 >= index2){
+                star.classList.add("colored");
+            }else{
+                star.classList.remove("colored");
+            }
+        });
+    });
+});
