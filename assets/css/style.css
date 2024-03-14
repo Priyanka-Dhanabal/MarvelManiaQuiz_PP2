@@ -20,8 +20,7 @@ body {
 
 h1 {
     text-align: center;
-    margin: 20px;
-    padding: 20px;
+    margin: 30px;
     font-size: 3em;
     font-family: "protest Revolution", sans-serif;
     font-weight: 900;
@@ -119,15 +118,12 @@ h1 {
 #question-tracking {
     margin: 20px 0;
     border-bottom: 1px solid #fff;
-    display: flex;
-    justify-content: end;
+    text-align: right;
 }
 
 #questions {
-
     font-size: 1.6em;
     margin: 25px 0;
-
 }
 
 .quiz .btn {
@@ -143,7 +139,6 @@ h1 {
     font-family: "Protest Revolution", sans-serif;
     font-size: 1.3em;
     cursor: pointer;
-
 }
 
 .quiz .btn:hover {
@@ -174,7 +169,6 @@ h1 {
 }
 
 .correct {
-
     background: linear-gradient(180deg, #bdf0bd, #17cf17, #76d376);
     color: #000;
 }
@@ -195,6 +189,14 @@ img{
     display: none;
 }
 
+/*Applying style for everything score container and greetings-container*/
+#score h3, #greetings-container h3{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: unset;
+}
+
+
 /*Review Div*/
 
 .review {
@@ -207,7 +209,6 @@ img{
     padding: 10px;
     border-radius: 10px;
     font-family: "Protest Revolution", sans-serif;
-
 }
 
 .review h3 {
@@ -245,14 +246,11 @@ label {
 
 .submit-btn {
     display: block;
-
 }
 
 .colored {
     color: gold;
 }
-
-
 
 .home-btn {
     width: 20em;

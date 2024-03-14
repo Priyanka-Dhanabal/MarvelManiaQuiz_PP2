@@ -144,35 +144,35 @@ Live link of my website -
 
 ### Content and resources
 
-#### Code Institute
+1. Code Institute
 - Course content for the portfolio project2 helped greatly in understanding the need to complete the project.
 - The Love Math project helped me understand various requirements from HTML CSS and Javascript point of view.
 
-#### W3 School
+2. W3 School
 - Used to reference Javascript.
 
-#### Favicons
+3. Favicons
 - Used to create an image to favicon.
 
-#### Font Awesome
+4. Font Awesome
 - Library for ICONs used in my website.
 
-#### Bro Code Youtube Channel
+5. Bro Code Youtube Channel
 - To learn Javascript and worked on some minor projects that were taught in that channel to understand the functions.
 
-#### Images Used
+6. Images Used
 - The background image used was taken from Google images.
 
-#### Balsamiq
+7. Balsamiq
 - used to create a wireframe to illustrate my project idea.
 
 ### Acknowledgements
 
-#### Mentor - Akshat_Garg
+1. Mentor - Akshat_Garg
 > My Mentor provided feedback and guidance throughout.
 
-#### Kristyna - Cohort facilitator
+2. Kristyna - Cohort facilitator
 > She was very helpful with all my queries related to the Code Institute study structure. Also, helping to understand the various needs to achieve a good project.
 
-#### Code Institute Tutor Support team
+3. Code Institute Tutor Support team
 > The Tutor support team was always available to answer my questions. However, my usage of tutor support was reduced compared to last time.

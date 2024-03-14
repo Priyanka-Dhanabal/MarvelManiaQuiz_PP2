@@ -45,7 +45,6 @@
                     chosen, you can not change. CareFull !<br>
                     <br> <i class="fa-solid fa-pen-nib"></i> Your score will be displayed at the end.</p>
             </div>
-
         </div>
 
         <!-- Container for quiz -->
@@ -53,7 +52,6 @@
         <div id="container" class="quiz-container hide ">
             <div class="quiz">
                 <div id="question-tracking" class="question-tracking">
-                    1 of 10 question
                 </div>
                 <h2 id="questions">Questions are here</h2>
                 <div id="answer-btns">
@@ -62,10 +60,15 @@
                     <button class="btn">Answer 3</button>
                     <button class="btn">Answer 4</button>
                 </div>
-                <img src="assets/images/bravo.gif" alt="Women saying Bravo!">
+                
                 <button id="next-btn">Next</button>
             </div>
+        </div>
 
+        <!-- Container for Score -->
+
+        <div id="score" class="review hide">
+            
         </div>
 
         <!-- Container for review -->
@@ -73,8 +76,6 @@
         <div id="review" class="review hide">
             <h3>Give us a rating:</h3>
             <form action="https://formdump.codeinstitute.net" method="post" target="_blank">
-
-
                 <div class="rating">
                     <input type="number" name="rating" value="" hidden>
                     <i class="fa-solid fa-star star"></i>
@@ -89,15 +90,13 @@
                     placeholder="I love it !" required></textarea><br>
                 <button type="submit" class="submit-btn">Submit</button>
             </form>
-
         </div>
 
         <div id="greetings-container" class="review hide">
-                <h2> THANK YOU !</h2>
+                <h3> THANK YOU FOR YOUR FEEDBACK !</h3>
         </div>
 
         <button id="home-btn" class="home-btn">Home</button>
-
         <script src="https://kit.fontawesome.com/0f5fd35744.js" crossorigin="anonymous"></script>
         <script src="assets/scripts/script.js"></script>
 

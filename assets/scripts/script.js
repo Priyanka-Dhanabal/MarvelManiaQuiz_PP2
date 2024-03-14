@@ -164,6 +164,7 @@ let questionElement = document.getElementById("questions");
 let answerBtnsContainer = document.getElementById("answer-btns");
 let nextBtn = document.getElementById("next-btn");
 let welcomePageDiv = document.getElementById("welcome-page");
+let scoreContainer = document.getElementById("score");
 let quizDiv = document.getElementById("container");
 let questionTracking = document.getElementById("question-tracking");
 let startBtn = document.getElementById("start-btn");
@@ -171,7 +172,7 @@ let reviewDiv = document.getElementById("review");
 let stars = document.querySelectorAll(".rating .star");
 let homeBtn = document.getElementById("home-btn");
 let ratingValue = document.querySelector(".rating input");
-let resultImage = document.getElementsByTagName("img")[0];
+let resultImage = document.createElement("img");
 let reviewSubmitBtn = document.querySelector(".submit-btn");
 let suggestionBox = document.getElementById("suggestion");
 let greetingContainer = document.getElementById("greetings-container");
@@ -182,7 +183,11 @@ let score = 0;
 
 // Event Listener for the Start Button in Welcome Page
 
-startBtn.addEventListener('click', function () {
+
+
+initEventListeners();
+
+function startBtnFunction() {
     welcomePageDiv.classList.add("hide");
     quizDiv.classList.remove("hide");
     suggestionBox.value = "";
@@ -192,13 +197,11 @@ startBtn.addEventListener('click', function () {
     }
     startQuiz();
     
-});
+};
 
 // Function to start the quiz
 
 function startQuiz() {
-
-    initEventListeners();
     currentQuestionIndex = 0;
     score = 0;
     nextBtn.innerHTML = "Next";
@@ -206,11 +209,13 @@ function startQuiz() {
 }
 
 function initEventListeners() {
+    startBtn.addEventListener('click', startBtnFunction);
     nextBtn.addEventListener('click', handleNextBtn);
     Array.from(answerBtnsContainer.children).forEach((eachAnswerBtn) => {
         eachAnswerBtn.addEventListener('click', selectAnswer);
     });
     reviewSubmitBtn.addEventListener('click', reviewChecks);
+    homeBtn.addEventListener('click', goHome);
 }
 
 /**
@@ -266,17 +271,13 @@ function handleNextBtn() {
  */
 function showScore() {
     resetPrevious();
-    questionTracking.style.display = "none";
+    quizDiv.classList.add("hide");
     reviewDiv.classList.remove("hide");
-    answerBtnsContainer.classList.add("hide");
+    scoreContainer.classList.remove("hide");
 
-    questionElement.innerHTML = `You scored ${score} out of ${QUESTIONS_CONFIG.length} !`;
-    questionElement.style.textAlign = "center";
+    scoreContainer.innerHTML = `<h3>You scored ${score} out of ${QUESTIONS_CONFIG.length} !</h3>`;
 
     homeBtn.style.display = "block";
-    homeBtn.addEventListener('click', goHome);
-
-    resultImage.style.display = "block";
 
     if (score <= 3) {
         resultImage.src = "assets/images/200(2).gif";
@@ -291,7 +292,9 @@ function showScore() {
         resultImage.src = "assets/images/thanos.gif";
         resultImage.alt = "Thanos from avengers endgame";
     }
-
+    resultImage.style.display = "block";
+    resultImage.style.marginTop = "10px";
+    scoreContainer.append(resultImage);
 }
 
 /** Home button is clicked, paged reverts to initial state, i.e welcome Page is shown.
@@ -300,11 +303,11 @@ function goHome() {
     resetPrevious();
     welcomePageDiv.classList.remove("hide");
     quizDiv.classList.add("hide");
-    questionTracking.remove("hide");
     reviewDiv.classList.add("hide");
     homeBtn.style.display = "none";
-    resultImage.style.display = "none";
     greetingContainer.classList.add("hide");
+    scoreContainer.classList.add("hide");
+
 }
 
 /** Hides the next Button before displaying next question.
