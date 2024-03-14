@@ -15,7 +15,7 @@ const QUESTIONS_CONFIG = [{
         },
     ]
 }, {
-    question: "What is the name of Tony Stark's AI in the Iron Man suit?",
+    question: "What is the name of Tony Stark's AI with male voice in the Iron Man suit?",
     answers: [{
             text: "F.R.I.D.A.Y."
         },
@@ -172,6 +172,9 @@ let stars = document.querySelectorAll(".rating .star");
 let homeBtn = document.getElementById("home-btn");
 let ratingValue = document.querySelector(".rating input");
 let resultImage = document.getElementsByTagName("img")[0];
+let reviewSubmitBtn = document.querySelector(".submit-btn");
+let suggestionBox = document.getElementById("suggestion");
+let greetingContainer = document.getElementById("greetings-container");
 
 
 let currentQuestionIndex = 0;
@@ -182,13 +185,19 @@ let score = 0;
 startBtn.addEventListener('click', function () {
     welcomePageDiv.classList.add("hide");
     quizDiv.classList.remove("hide");
+    suggestionBox.value = "";
+    ratingValue.value = "";
+    for(let star of stars){
+        star.classList.remove("colored");
+    }
     startQuiz();
+    
 });
 
 // Function to start the quiz
 
 function startQuiz() {
-    
+
     initEventListeners();
     currentQuestionIndex = 0;
     score = 0;
@@ -201,6 +210,7 @@ function initEventListeners() {
     Array.from(answerBtnsContainer.children).forEach((eachAnswerBtn) => {
         eachAnswerBtn.addEventListener('click', selectAnswer);
     });
+    reviewSubmitBtn.addEventListener('click', reviewChecks);
 }
 
 /**
@@ -256,7 +266,6 @@ function handleNextBtn() {
  */
 function showScore() {
     resetPrevious();
-    reviewDiv.parentElement.parentElement.style.height = "100%";
     questionTracking.style.display = "none";
     reviewDiv.classList.remove("hide");
     answerBtnsContainer.classList.add("hide");
@@ -269,19 +278,16 @@ function showScore() {
 
     resultImage.style.display = "block";
 
-    if(score <= 3){
+    if (score <= 3) {
         resultImage.src = "assets/images/200(2).gif";
         resultImage.alt = "hulk beats thor from thor ragnarok";
-    }
-    else if( score <= 5){
+    } else if (score <= 5) {
         resultImage.src = "assets/images/captain.gif";
         resultImage.alt = "Captain feeling disapointed";
-    }
-    else if( score<= 7){
+    } else if (score <= 7) {
         resultImage.src = "assets/images/kneel.gif";
         resultImage.alt = "Loki from avengers stating kneel";
-    }
-    else if(score > 7){
+    } else if (score > 7) {
         resultImage.src = "assets/images/thanos.gif";
         resultImage.alt = "Thanos from avengers endgame";
     }
@@ -298,6 +304,7 @@ function goHome() {
     reviewDiv.classList.add("hide");
     homeBtn.style.display = "none";
     resultImage.style.display = "none";
+    greetingContainer.classList.add("hide");
 }
 
 /** Hides the next Button before displaying next question.
@@ -336,25 +343,32 @@ function selectAnswer(event) {
 
 // Rating
 
-let reviewSubmitBtn = document.querySelector(".submit-btn");
-reviewSubmitBtn.addEventListener('click', function () {
-
-    if (ratingValue.value === "" || ratingValue.value === null) {
-        window.alert("Please provide us a rating.");
-    }
-    
-});
-
-
 stars.forEach((star, index1) => {
     star.addEventListener('click', function () {
         ratingValue.value = index1 + 1;
         stars.forEach((star, index2) => {
-            if(index1 >= index2){
+            if (index1 >= index2) {
                 star.classList.add("colored");
-            }else{
+            } else {
                 star.classList.remove("colored");
             }
         });
     });
 });
+
+function reviewChecks(){
+    initEventListeners();
+    if(ratingValue.value === "" || ratingValue.value === null){
+            window.alert("Please provide us a rating.");
+            ratingValue.value = 1;
+    }
+
+    if(ratingValue.value !== "" && suggestionBox.value !== ""){
+        greetingContainer.classList.remove("hide");
+        reviewDiv.classList.add("hide");
+    }
+    
+}
+
+
+
