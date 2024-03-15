@@ -1,11 +1,11 @@
-# MarvelManiaA
+# MarvelManiaa
 
 ![Responsive Image]()
 
-MarvelMania is a Marvel Studio-themed quiz website I decided to come up with as I love watching Marvel movies with my family and friends. The user will be provided with a question along with four options, among which one option will be the correct answer. The user will be able to view the result at the end of the Quiz.
+MarvelManiaa is a Marvel Studio-themed quiz website I decided to come up with as I love watching Marvel movies with my family and friends. The user will be provided with a question along with four options, among which one option will be the correct answer. The user will be able to view the result at the end of the Quiz.
 ### - By Priyanka Dhanabal
-Live Website can be viewed [here]() <br>
-You can check out my Repository [here]()
+Live Website can be viewed [here](https://priyanka-dhanabal.github.io/MarvelManiaQuiz_PP2/) <br>
+You can check out my Repository [here](https://github.com/Priyanka-Dhanabal/MarvelManiaQuiz_PP2)
 ## Table of contents
  1. [ UX ](#ux)
 	- [Site Goal](#site-goal)
@@ -211,7 +211,7 @@ How to deploy your project from Gitpod IDE to GitHub. I have used Gitpod as IDE 
  8. If the link has not appeared, navigate back to your project repository.
  9. On the right-hand side, select deployments, you will find the link here.
  
-Live link of my website - 
+Live link of my website - https://priyanka-dhanabal.github.io/MarvelManiaQuiz_PP2/
 
 ## Credits
 ### Content and resources

@@ -21,7 +21,7 @@ body {
 h1 {
     text-align: center;
     margin: 30px;
-    font-size: 3.5em;
+    font-size: 3em;
     font-family: "protest Revolution", sans-serif;
     font-weight: 900;
     color: #fff;
@@ -276,4 +276,10 @@ footer{
     font-family: 'Protest Revolution', sans-serif;
     letter-spacing: 2px;
     text-align: center;
+}
+
+@media screen and (min-width:900px) {
+    h1{
+        font-size: 3.8em;
+    }
 }
