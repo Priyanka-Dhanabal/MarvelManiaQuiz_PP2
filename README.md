@@ -51,6 +51,9 @@ The user will be provided with a question along with four options, among which o
 	-  Imported **Protest Revolution** from Google font used as the primary font, and **Sans-Serif** used as the secondary font.
 
 ### Wireframe
+At the start, I wanted to create a website for quiz. Later on I decided the theme should be marvel as I thought it would be interesting of the users, while they visit my page. I have developed this wireframe using Balsamiq tool.
+
+![Wireframe](assets/images/readme/wireframe.png)
 
 ## Features
 
