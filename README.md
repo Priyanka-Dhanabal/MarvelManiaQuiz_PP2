@@ -1,6 +1,6 @@
 # MarvelManiaa
 
-![Responsive Image]()
+![Responsive Image](assets/images/readme/amiresponsive.png)
 
 MarvelManiaa is a Marvel Studio-themed quiz website I decided to come up with as I love watching Marvel movies with my family and friends. The user will be provided with a question along with four options, among which one option will be the correct answer. The user will be able to view the result at the end of the Quiz.
 ### - By Priyanka Dhanabal
@@ -73,8 +73,11 @@ The user will be provided with a question along with four options, among which o
 		Displays questions with 4 options. Once an option is chosen the right answer is highlighted with green and the wrong is with red. 
 		On the top right-hand side, the user can view the question number.
 		
-		![Quiz Container Image](assets/images/readme/quiz.png)
-		![Quiz Container with right answer and wrong chosen Image](assets/images/readme/quizWithAnswers.png)
+		![Quiz Container Image](assets/images/readme/quiz.png)<br>
+
+		![Quiz Container with right answer and wrong chosen Image](assets/images/readme/quizWithAnswers.png)<br>
+
+		![Question display](assets/images/readme/questionNumber.png)
 		
 		
 	- Review Container
@@ -132,6 +135,8 @@ Below tests were carried out.
 |Users can view the score with a gif  | True |
 |Users can view the welcome page when the Home button is clicked  | True |
 
+<br>
+
 **Form Validation tests were carried out as below.**
 
 |Input | Status |
@@ -146,10 +151,15 @@ Below tests were carried out.
 
 ![Form response after click submit](assets/images/readme/formValidation2.png)
 
+<br>
+
  **Page is responsive**
 |Input | Status |
 |--|--|
 | Page is responsive to the device the user views the website | True |
+
+<br>
+
 
 ![Responsive in smaller screen](assets/images/readme/responsivness1.png)
 
@@ -186,13 +196,13 @@ Below tests were carried out.
 
 - When the game is finished and the user comes back to the Home page, where the start button is displayed. If the user wanted to play again by clicking the start button, the score was displayed not the questions with options.
 
-![Bug Image]()
+![Bug Image](assets/images/readme/bug.png)
 
 - I was advised by my mentor that the code works but it is not feasible, so I had to change my code in such a way that, there are no new buttons created but update the innerText value in the existing button.
 
 - This resolved the Bug. Now the user can play continuously.
 
-![Bug resolved Image]()
+![Bug resolved Image](assets/images/readme/bugFixed.png)
 
 ### unfixed Bugs
 
