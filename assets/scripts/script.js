@@ -197,7 +197,7 @@ function startBtnFunction() {
     }
     startQuiz();
     
-};
+}
 
 // Function to start the quiz
 

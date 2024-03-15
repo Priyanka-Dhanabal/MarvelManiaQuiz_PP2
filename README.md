@@ -58,7 +58,7 @@ The user will be provided with a question along with four options, among which o
 
 	 Featured at the top of the page, the header shows the Quiz name: MarvelManiA in a font that is visible and contrasts with the background.
 
-	 ![Header Image]()
+	 ![Header Image](assets/images/readme/header.png)
 	 
  - Main
 
@@ -66,41 +66,41 @@ The user will be provided with a question along with four options, among which o
 
 		Consists of a Start Button to start the quiz and brief instructions to play the quiz.
 		
-		![Welcome Container Image]()
+		![Welcome Container Image](assets/images/readme/welcome.png)
 		
 	- Quiz Container
 
 		Displays questions with 4 options. Once an option is chosen the right answer is highlighted with green and the wrong is with red. 
 		On the top right-hand side, the user can view the question number.
 		
-		![Quiz Container Image]()
-		![Quiz Container with right answer chosen Image]()
-		![Quiz Container with wrong answer chosen Image]()
+		![Quiz Container Image](assets/images/readme/quiz.png)
+		![Quiz Container with right answer and wrong chosen Image](assets/images/readme/quizWithAnswers.png)
+		
 		
 	- Review Container
 
 		A form requesting the user to provide a star rating and feedback.
 		If the user does not wish to give a star rating, one first click on the submit button, and a window alert is given to provide a star rating. However, If the user still refuses, the star rating is taken as 1.
 		
-		![ReviewContainer Image]()
+		![ReviewContainer Image](assets/images/readme/rating.png)
 		
 	- Score Container
 
 		Displays the score obtained by the user along with a gif at the end of the quiz.
 		
-		![Score Container Image]()
+		![Score Container Image](assets/images/readme/score.png)
 		
 	- Home Button
 
 		 Users can return to the welcome page.
 
-		 ![Home Button Image]()
+		 ![Home Button Image](assets/images/readme/home.png)
 		 
  - Footer
 
      Display the copyright 
      
-     ![Footer Image]()
+     ![Footer Image](assets/images/readme/footer.png)
 
 ## Future-Features
 - I would like to take the quiz to another level by adding a few more features like adding buttons at the welcome container where the user can choose which genre the quiz can be asked from.
@@ -142,27 +142,37 @@ Below tests were carried out.
 |Users receive a Windows alert if a star rating is not given | True |
 |Users receive a response on form submission | True |
 
+![Form validation](assets/images/readme/formValidation1.png)
+
+![Form response after click submit](assets/images/readme/formValidation2.png)
+
  **Page is responsive**
 |Input | Status |
 |--|--|
 | Page is responsive to the device the user views the website | True |
+
+![Responsive in smaller screen](assets/images/readme/responsivness1.png)
+
+![Responsive in larger screen](assets/images/readme/responsivness2.png)
 
 ### Validations
 
 **HTML Validation** -W3C Validation 
 - No error found
 
-![W3C Validator Image]()
+![W3C Validator Image](assets/images/readme/html.png)
 
 **CSS Validation** - using Jigsaw Validator 
 - No error found
 
-![Jigsaw Validator Image]()
+
+![Jigsaw Validator Image](assets/images/readme/css.png)
 
 **Javascript Validation** - using JSHint Validator 
 - No error or warnings found
 
-![JSHint Validator Image]()
+
+![JSHint Validator Image](assets/images/readme/js.png)
 
 ### Google Lighthouse Testing
 
