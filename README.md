@@ -55,6 +55,9 @@ At the start, I wanted to create a website for quiz. Later on I decided the them
 
 ![Wireframe](assets/images/readme/wireframe.png)
 
+
+[Back to top](#marvelmaniaa)
+
 ## Features
 
  - Header
@@ -113,6 +116,8 @@ At the start, I wanted to create a website for quiz. Later on I decided the them
 
 - Add a few animations.
 
+[Back to top](#marvelmaniaa)
+
 ## Technologies Used
 
 I have used the following technologies to build my website.
@@ -123,6 +128,8 @@ I have used the following technologies to build my website.
  4. **GitHub** Used to store my Project and later to deploy the same.
  5. **GitPod** Used as an Integrated Development Environment for building this website.
  6. **Git** Used to version control throughout my project and to ensure that a clean record is maintained.
+
+ [Back to top](#marvelmaniaa)
 
 ## Testing
 ### Manual Testing
@@ -189,7 +196,9 @@ Below tests were carried out.
 
 ### Google Lighthouse Testing
 
-![Google Lighthouse Image]()
+![Google Lighthouse Image](assets/images/readme/lighthouse.png)
+
+[Back to top](#marvelmaniaa)
 
 ## Bugs
 
@@ -211,6 +220,8 @@ Below tests were carried out.
 
 - no unfixed Bugs
 
+[Back to top](#marvelmaniaa)
+
 ## Deployment
 How to deploy your project from Gitpod IDE to GitHub. I have used Gitpod as IDE for the project.
 
@@ -225,6 +236,8 @@ How to deploy your project from Gitpod IDE to GitHub. I have used Gitpod as IDE 
  9. On the right-hand side, select deployments, you will find the link here.
  
 Live link of my website - https://priyanka-dhanabal.github.io/MarvelManiaQuiz_PP2/
+
+[Back to top](#marvelmaniaa)
 
 ## Credits
 ### Content and resources
@@ -254,10 +267,10 @@ Mentor - Akshat_Garg
 - My Mentor provided feedback and guidance throughout.
 
 Kristyna - Cohort facilitator
-- She was very helpful in understanding the various requirements to achieve a good project.
+- She was very helpful in making me understand the various requirements to achieve a good project.
 
 Code Institute Tutor Support team
-- The Tutor support team was always available to answer my questions. However, my usage of tutor support was minimal compared to the last time unit.
+- The Tutor support team was always available to answer my questions. However, my usage of tutor support was minimal compared to the last unit.
 
 *****************
 
