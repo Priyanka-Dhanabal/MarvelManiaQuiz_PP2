@@ -231,7 +231,7 @@ function showQuestion() {
     answerBtnsContainer.classList.remove("hide");
 
     Array.from(answerBtnsContainer.children).forEach((eachAnswerBtn, idx) => {
-        const answer = currentQuestion.answers[idx];
+        let answer = currentQuestion.answers[idx];
         eachAnswerBtn.innerHTML = answer.text;
         resetAnswerBtnStyle(eachAnswerBtn);
 
@@ -322,7 +322,7 @@ function resetPrevious() {
  */
 function selectAnswer(event) {
     let selectedBtn = event.target;
-    const isCorrect = selectedBtn.dataset.correct === "true";
+    let isCorrect = selectedBtn.dataset.correct === "true";
     if (isCorrect) {
         selectedBtn.classList.add("correct");
         score++;
